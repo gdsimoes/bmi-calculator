@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: "fallback" });
 
 export const metadata: Metadata = {
     title: "Frontend Mentor | Body Mass Index Calculator",
