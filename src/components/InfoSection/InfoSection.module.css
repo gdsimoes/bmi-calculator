@@ -2,6 +2,10 @@
     margin: 72px 29px 96px 19px;
     padding: 24px;
 
+    InfoCard {
+        color: red;
+    }
+
     h2,
     .intro {
         text-align: center;
