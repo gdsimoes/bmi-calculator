@@ -1,0 +1,14 @@
+.wrapper {
+    margin: 72px 29px 96px 19px;
+    padding: 24px;
+
+    h2,
+    .intro {
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 1.25rem;
+        letter-spacing: -1px;
+    }
+}

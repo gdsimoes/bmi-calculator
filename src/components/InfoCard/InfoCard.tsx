@@ -12,13 +12,13 @@ type InfoCardProps = {
 
 function InfoCard({ icon, title, children }: InfoCardProps) {
     return (
-        <article>
+        <section className={styles.wrapper}>
             <header>
                 <Image src={icon} alt="" />
                 <h3>{title}</h3>
             </header>
             <p>{children}</p>
-        </article>
+        </section>
     );
 }
 

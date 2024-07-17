@@ -1,6 +1,6 @@
 import InfoCard from "../InfoCard";
 
-import styles from "./infoSection.module.css";
+import styles from "./InfoSection.module.css";
 
 // Icons
 import genderIcon from "@/../public/images/icon-gender.svg";
@@ -11,9 +11,9 @@ import raceIcon from "@/../public/images/icon-race.svg";
 
 function infoSection() {
     return (
-        <section>
+        <article className={styles.wrapper}>
             <h2>Limitations of BMI</h2>
-            <p>
+            <p className={styles.intro}>
                 Although BMI is often a practical indicator of healthy weight, it is not suited for every person.
                 Specific groups should carefully consider their BMI outcomes, and in certain cases, the measurement may
                 not be beneficial to use.
@@ -43,7 +43,7 @@ function infoSection() {
                 Certain health concerns may affect individuals of some Black and Asian origins at lower BMIs than
                 others. To learn more, it is advised to discuss this with your GP or practice nurse.
             </InfoCard>
-        </section>
+        </article>
     );
 }
 
