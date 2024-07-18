@@ -18,3 +18,27 @@
         text-align: center;
     }
 }
+
+/* 
+    Tablet
+*/
+
+@media screen and (min-width: 600px) {
+    .wrapper {
+        margin: 96px 43px 96px 39px;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        row-gap: 24px;
+
+        & h2 {
+            margin-bottom: 8px;
+        }
+
+        & > p {
+            margin-bottom: 32px;
+        }
+    }
+}

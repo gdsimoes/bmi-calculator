@@ -17,3 +17,15 @@
         margin-bottom: 16px;
     }
 }
+
+/* 
+    Tablet
+*/
+
+@media (600px <= width) {
+    .wrapper {
+        flex: 1 1 335.5px;
+        max-width: 365px;
+        padding: 32px;
+    }
+}
