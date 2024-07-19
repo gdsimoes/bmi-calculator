@@ -22,8 +22,7 @@
 /* 
     Tablet
 */
-
-@media screen and (min-width: 600px) {
+@media (600px <= width) {
     .wrapper {
         margin: 96px 43px 96px 39px;
 
@@ -40,5 +39,14 @@
         & > p {
             margin-bottom: 32px;
         }
+    }
+}
+
+/* 
+    Desktop
+*/
+@media (1160px <= width) {
+    .wrapper {
+        margin: 120px 140px;
     }
 }
