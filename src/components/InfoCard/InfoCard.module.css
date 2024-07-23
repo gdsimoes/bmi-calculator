@@ -29,3 +29,35 @@
         padding: 32px;
     }
 }
+
+/* 
+Desktop
+*/
+@media (1160px <= width) {
+    .gender {
+        margin-left: auto;
+        margin-right: 99px;
+    }
+
+    .age {
+        margin-left: auto;
+        position: relative;
+
+        &::before {
+            content: url("/images/pattern-curved-line-right.svg");
+            position: absolute;
+
+            bottom: 43px;
+            left: -233px;
+        }
+    }
+
+    /* This is a hack to put the pregnancy card in the next row */
+    .pregnancy {
+        margin-left: 100px;
+    }
+
+    .race {
+        margin-right: 100px;
+    }
+}

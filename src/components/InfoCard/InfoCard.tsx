@@ -14,7 +14,7 @@ async function InfoCard({ type, children }: InfoCardProps) {
     const icon = await import(`../../../public/images/icon-${type}.svg`);
 
     return (
-        <section className={styles.wrapper}>
+        <section className={`${styles.wrapper} ${styles[type]}`}>
             <header>
                 <Image src={icon} alt="" />
                 <h3>{type}</h3>
