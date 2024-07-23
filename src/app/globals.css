@@ -1,5 +1,5 @@
 /*
-  CSS Reset (inspired by Josh Comeau's: https://www.joshwcomeau.com/css/custom-css-reset/)
+    CSS Reset (inspired by Josh Comeau's: https://www.joshwcomeau.com/css/custom-css-reset/)
 */
 
 *,
@@ -31,4 +31,35 @@ button,
 textarea,
 select {
     font: inherit;
+}
+
+/*
+    Variables
+*/
+:root {
+    --blue: #345ff6;
+    --gunmetal: #253347;
+    --dark-electric-blue: #5e6e85;
+    --white: #ffffff;
+}
+
+/*
+    Typography
+*/
+
+body {
+    color: var(--dark-electric-blue);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--gunmetal);
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2rem;
+    letter-spacing: -1.6px;
 }
