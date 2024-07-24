@@ -1,7 +1,5 @@
 import Image from "next/image";
 
-import { StaticImport } from "next/dist/shared/lib/get-img-props";
-
 import styles from "./InfoCard.module.css";
 
 type InfoCardProps = {
