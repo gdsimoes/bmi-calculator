@@ -11,11 +11,13 @@ const HabitsCardData = JSON.parse(fs.readFileSync(path.resolve(FILE_PATH), "utf8
 function Habits() {
     return (
         <article className={styles.wrapper}>
-            {HabitsCardData.map(({ type, title, content }: { type: string; title: string; content: string }) => (
-                <HabitsCard key={type} type={type} title={title}>
-                    {content}
-                </HabitsCard>
-            ))}
+            <div className={styles.content}>
+                {HabitsCardData.map(({ type, title, content }: { type: string; title: string; content: string }) => (
+                    <HabitsCard key={type} type={type} title={title}>
+                        {content}
+                    </HabitsCard>
+                ))}
+            </div>
         </article>
     );
 }

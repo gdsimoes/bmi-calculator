@@ -44,8 +44,10 @@ select {
 
     --left-padding: 19px;
     --right-padding: 29px;
+    --content-width: 1160px;
 }
 
+/* Tablet */
 @media (550px <= width) {
     :root {
         --left-padding: 39px;
@@ -72,4 +74,34 @@ h3 {
 h2 {
     font-size: 2rem;
     letter-spacing: -1.6px;
+}
+
+/*
+    Layout
+*/
+main {
+    width: min(100%, 1392px);
+    margin-inline: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 72px;
+
+    padding-bottom: 96px;
+}
+
+/* Tablet */
+@media (550px <= width) {
+    main {
+        gap: 96px;
+    }
+}
+
+/* Desktop */
+@media (1200px <= width) {
+    main {
+        gap: 120px;
+        padding-bottom: 120px;
+    }
 }

@@ -33,7 +33,7 @@
 /* 
 Desktop
 */
-@media (1160px <= width) {
+@media (1200px <= width) {
     .gender {
         margin-left: auto;
         margin-right: 99px;

@@ -12,10 +12,17 @@
     }
 }
 
-@media (550px <= width) {
+@media (550px <= width < 1200px) {
     .wrapper {
         flex-direction: row;
         align-items: center;
         gap: 40px;
+    }
+}
+
+@media (1200px <= width) {
+    .wrapper {
+        gap: 45px;
+        flex: 1;
     }
 }
