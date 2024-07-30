@@ -13,12 +13,12 @@ async function HabitsCard({ type, title, children }: HabitsCardProps) {
     const icon = await import(`../../../../public/images/icon-${type}.svg`);
 
     return (
-        <article>
-            <header>
-                <Image src={JSON.parse(JSON.stringify(icon))} alt="" />
+        <article className={styles.wrapper}>
+            <Image src={JSON.parse(JSON.stringify(icon))} alt="" />
+            <div>
                 <h3>{title}</h3>
-            </header>
-            <p>{children}</p>
+                <p>{children}</p>
+            </div>
         </article>
     );
 }
