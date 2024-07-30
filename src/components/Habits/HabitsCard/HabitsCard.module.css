@@ -11,3 +11,11 @@
         margin-bottom: 24px;
     }
 }
+
+@media (550px <= width) {
+    .wrapper {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+    }
+}

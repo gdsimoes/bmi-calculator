@@ -41,6 +41,16 @@ select {
     --gunmetal: #253347;
     --dark-electric-blue: #5e6e85;
     --white: #ffffff;
+
+    --left-padding: 19px;
+    --right-padding: 29px;
+}
+
+@media (550px <= width) {
+    :root {
+        --left-padding: 39px;
+        --right-padding: 43px;
+    }
 }
 
 /*
