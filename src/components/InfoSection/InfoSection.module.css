@@ -1,5 +1,5 @@
 .wrapper {
-    margin: 72px 29px 96px 19px;
+    padding-inline: var(--left-padding) var(--right-padding);
 
     display: flex;
     flex-direction: column;
@@ -18,10 +18,8 @@
 /* 
     Tablet
 */
-@media (600px <= width) {
+@media (550px <= width) {
     .wrapper {
-        margin: 96px 43px 96px 39px;
-
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
@@ -37,10 +35,10 @@
 /* 
     Desktop
 */
-@media (1160px <= width) {
+@media (1200px <= width) {
     .wrapper {
         width: 1160px;
-        margin: 120px auto;
+        padding: 0;
         gap: 32px;
         row-gap: 32px;
     }
