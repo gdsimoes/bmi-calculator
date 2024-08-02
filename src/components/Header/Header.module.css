@@ -16,6 +16,17 @@
     }
 }
 
+/* Tablet */
+@media (550px <= width) {
+    .wrapper {
+        padding: 32px var(--left-padding) 326px var(--right-padding);
+
+        & > img {
+            margin-bottom: 16px;
+        }
+    }
+}
+
 /* Desktop */
 @media (1200px <= width) {
     .wrapper {
