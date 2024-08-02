@@ -9,8 +9,7 @@ type HabitsCardProps = {
 };
 
 async function HabitsCard({ type, title, children }: HabitsCardProps) {
-    // Unfortunately the path alias doesn't work here
-    const icon = await import(`../../../../public/images/icon-${type}.svg`);
+    const icon = await import(`/public/images/icon-${type}.svg`);
 
     return (
         <article className={styles.wrapper}>

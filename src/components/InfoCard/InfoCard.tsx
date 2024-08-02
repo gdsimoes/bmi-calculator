@@ -8,8 +8,7 @@ type InfoCardProps = {
 };
 
 async function InfoCard({ type, children }: InfoCardProps) {
-    // Unfortunately the path alias doesn't work here
-    const icon = await import(`../../../public/images/icon-${type}.svg`);
+    const icon = await import(`/public/images/icon-${type}.svg`);
 
     return (
         <section className={`${styles.wrapper} ${styles[type]}`}>
