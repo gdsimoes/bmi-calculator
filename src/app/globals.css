@@ -82,6 +82,11 @@ h2 {
 }
 
 @media (1200px <= width) {
+    h1 {
+        font-size: 4rem;
+        letter-spacing: -3.2px;
+    }
+
     h2 {
         font-size: 3rem;
         letter-spacing: -2.4px;

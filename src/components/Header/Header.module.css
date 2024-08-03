@@ -30,9 +30,19 @@
 /* Desktop */
 @media (1200px <= width) {
     .wrapper {
+        width: 978px;
+        padding: 75px 397px 200px 116px;
+
+        align-self: start;
+        align-items: start;
+        gap: 35px;
+
+        text-align: start;
+
         & > img {
             width: 64px;
             height: auto;
+            margin-bottom: 92px;
         }
     }
 }
