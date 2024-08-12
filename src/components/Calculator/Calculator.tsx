@@ -6,6 +6,7 @@ import styles from "./Calculator.module.css";
 
 import Units from "./Units";
 import Input from "./Input";
+import Result from "./Result";
 
 import { unitType } from "./types";
 
@@ -19,7 +20,7 @@ function Calculator() {
                 <Units unit={unit} setUnit={setUnit} />
                 <Input unit={unit} />
             </form>
-            <section></section>
+            <Result />
         </section>
     );
 }
