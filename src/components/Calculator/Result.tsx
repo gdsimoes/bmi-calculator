@@ -3,8 +3,6 @@ import React from "react";
 import { unitType } from "./types";
 
 function metricBmi(height: number, weight: number) {
-    console.log({ height, weight });
-
     return weight / height ** 2;
 }
 
