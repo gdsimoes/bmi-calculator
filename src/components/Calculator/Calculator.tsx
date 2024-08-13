@@ -13,14 +13,18 @@ import { unitType } from "./types";
 function Calculator() {
     const [unit, setUnit] = React.useState<unitType>("metric");
 
+    // Height is in meters and weight is in kilograms
+    const [height, setHeight] = React.useState<number>(0);
+    const [weight, setWeight] = React.useState<number>(0);
+
     return (
         <section className={styles.wrapper}>
             <h2>Enter your details below</h2>
             <form>
                 <Units unit={unit} setUnit={setUnit} />
-                <Input unit={unit} />
+                <Input unit={unit} setHeight={setHeight} setWeight={setWeight} />
             </form>
-            <Result />
+            <Result height={height} weight={weight} />
         </section>
     );
 }
