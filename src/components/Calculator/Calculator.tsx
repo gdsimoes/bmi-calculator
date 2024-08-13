@@ -24,7 +24,7 @@ function Calculator() {
                 <Units unit={unit} setUnit={setUnit} />
                 <Input unit={unit} setHeight={setHeight} setWeight={setWeight} />
             </form>
-            <Result height={height} weight={weight} />
+            <Result unit={unit} height={height} weight={weight} />
         </section>
     );
 }
