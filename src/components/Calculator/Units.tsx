@@ -16,26 +16,26 @@ function Units({ unit, setUnit }: UnitsProps) {
                 <legend>
                     <VisuallyHidden>Units</VisuallyHidden>
                 </legend>
-                <label>
-                    <input
-                        type="radio"
-                        name="unit"
-                        value="metric"
-                        checked={unit === "metric"}
-                        onChange={() => setUnit("metric")}
-                    />{" "}
+                <input
+                    type="radio"
+                    name="unit"
+                    value="metric"
+                    id="metric"
+                    checked={unit === "metric"}
+                    onChange={() => setUnit("metric")}
+                />{" "}
+                <label htmlFor="metric" className={styles.marginRight}>
                     Metric
                 </label>
-                <label>
-                    <input
-                        type="radio"
-                        name="unit"
-                        value="imperial"
-                        checked={unit === "imperial"}
-                        onChange={() => setUnit("imperial")}
-                    />{" "}
-                    Imperial
-                </label>
+                <input
+                    type="radio"
+                    name="unit"
+                    value="imperial"
+                    id="imperial"
+                    checked={unit === "imperial"}
+                    onChange={() => setUnit("imperial")}
+                />{" "}
+                <label htmlFor="imperial">Imperial</label>
             </fieldset>
         </>
     );

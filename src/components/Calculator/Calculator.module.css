@@ -23,6 +23,12 @@
 
     & legend {
         font-size: 0.875rem;
+        margin-bottom: 8px;
+    }
+
+    & .row {
+        display: flex;
+        gap: 16px;
     }
 
     & input[type="number"] {
@@ -51,6 +57,16 @@
 
 .unit {
     margin-bottom: 24px;
+    margin-right: 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+
+    & .marginRight {
+        margin-right: auto;
+    }
 
     & label {
         font-weight: 600;
@@ -73,20 +89,24 @@
     }
 
     & input:checked {
-        /* box-shadow: 0 0 0 1px #ff5722; */
         background-color: var(--blue);
         border: 8px solid rgba(255, 255, 255, 0.85);
     }
 }
 
+.weight {
+    padding-top: 16px;
+}
+
 .label {
     color: var(--blue);
     font-size: 1.5rem;
+    font-weight: 600;
     line-height: 1.1;
     letter-spacing: -1.2px;
 
     position: absolute;
-    transform: translate(calc(-100% - 24px));
+    transform: translate(calc(-100% - 24px), 20px);
 }
 
 .result {
@@ -104,12 +124,16 @@
     line-height: 1.1;
     font-weight: 600;
     letter-spacing: -1.2px;
+
+    margin-bottom: 16px;
 }
 
 .intro {
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 600;
+
+    margin-bottom: 8px;
 }
 
 .bmi {
@@ -117,6 +141,8 @@
     line-height: 1.1;
     font-weight: 600;
     letter-spacing: -2.4px;
+
+    margin-bottom: 24px;
 }
 
 .content span {

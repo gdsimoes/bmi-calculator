@@ -74,43 +74,47 @@ function Input({ unit, setHeight, setWeight }: InputProps) {
         <div>
             <fieldset>
                 <legend>Height</legend>
-                {unit === "metric" ? (
-                    <label>
-                        <input type="number" placeholder="0" value={cm} onChange={handleChange("cm")} />
-                        <span className={styles.label}>cm</span>
-                    </label>
-                ) : (
-                    <>
+                <div className={styles.row}>
+                    {unit === "metric" ? (
                         <label>
-                            <input type="number" placeholder="0" value={ft} onChange={handleChange("ft")} />
-                            <span className={styles.label}>ft</span>
+                            <input type="number" placeholder="0" value={cm} onChange={handleChange("cm")} />
+                            <span className={styles.label}>cm</span>
                         </label>
-                        <label>
-                            <input type="number" placeholder="0" value={inches} onChange={handleChange("inches")} />
-                            <span className={styles.label}>in</span>
-                        </label>
-                    </>
-                )}
+                    ) : (
+                        <>
+                            <label>
+                                <input type="number" placeholder="0" value={ft} onChange={handleChange("ft")} />
+                                <span className={styles.label}>ft</span>
+                            </label>
+                            <label>
+                                <input type="number" placeholder="0" value={inches} onChange={handleChange("inches")} />
+                                <span className={styles.label}>in</span>
+                            </label>
+                        </>
+                    )}
+                </div>
             </fieldset>
             <fieldset>
-                <legend>Weight</legend>
-                {unit === "metric" ? (
-                    <label>
-                        <input type="number" placeholder="0" value={kg} onChange={handleChange("kg")} />
-                        <span className={styles.label}>kg</span>
-                    </label>
-                ) : (
-                    <>
+                <legend className={styles.weight}>Weight</legend>
+                <div className={styles.row}>
+                    {unit === "metric" ? (
                         <label>
-                            <input type="number" placeholder="0" value={st} onChange={handleChange("st")} />
-                            <span className={styles.label}>st</span>
+                            <input type="number" placeholder="0" value={kg} onChange={handleChange("kg")} />
+                            <span className={styles.label}>kg</span>
                         </label>
-                        <label>
-                            <input type="number" placeholder="0" value={lbs} onChange={handleChange("lbs")} />
-                            <span className={styles.label}>lbs</span>
-                        </label>
-                    </>
-                )}
+                    ) : (
+                        <>
+                            <label>
+                                <input type="number" placeholder="0" value={st} onChange={handleChange("st")} />
+                                <span className={styles.label}>st</span>
+                            </label>
+                            <label>
+                                <input type="number" placeholder="0" value={lbs} onChange={handleChange("lbs")} />
+                                <span className={styles.label}>lbs</span>
+                            </label>
+                        </>
+                    )}
+                </div>
             </fieldset>
         </div>
     );
