@@ -12,7 +12,7 @@ type UnitsProps = {
 function Units({ unit, setUnit }: UnitsProps) {
     return (
         <>
-            <fieldset>
+            <fieldset className={styles.unit}>
                 <legend>
                     <VisuallyHidden>Units</VisuallyHidden>
                 </legend>
