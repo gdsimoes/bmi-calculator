@@ -1,5 +1,7 @@
 import React from "react";
 
+import styles from "./Calculator.module.css";
+
 import { unitType } from "./types";
 
 function metricBmi(height: number, weight: number) {
@@ -25,6 +27,18 @@ function imperialWeightRange(bmi: number, height: number) {
     )}lbs`;
 }
 
+function bmiText(bmi: number) {
+    if (bmi < 18.5) {
+        return "underweight";
+    } else if (bmi < 25) {
+        return "a healthy weight";
+    } else if (bmi < 30) {
+        return "overweight";
+    } else {
+        return "obese";
+    }
+}
+
 type ResultProps = {
     unit: unitType;
     height: number;
@@ -34,8 +48,8 @@ type ResultProps = {
 function Result({ unit, height, weight }: ResultProps) {
     if (height === 0 || weight === 0) {
         return (
-            <section>
-                <p>Welcome!</p>
+            <section className={styles.result}>
+                <p className={styles.welcome}>Welcome!</p>
                 <p>Enter your height and weight and you&apos;ll see your BMI result here</p>
             </section>
         );
@@ -44,12 +58,12 @@ function Result({ unit, height, weight }: ResultProps) {
     const bmi = metricBmi(height, weight);
 
     return (
-        <section>
-            <p>Your BMI is...</p>
-            <p>{bmi.toFixed(1)}</p>
-            <p>
-                Your BMI suggests you&apos;re a healthy weight. Your ideal weight is between{" "}
-                {unit === "metric" ? metricWeightRange(bmi, height) : imperialWeightRange(bmi, height)}.
+        <section className={styles.result}>
+            <p className={styles.intro}>Your BMI is...</p>
+            <p className={styles.bmi}>{bmi.toFixed(1)}</p>
+            <p className={styles.content}>
+                Your BMI suggests you&apos;re {bmiText(bmi)}. Your ideal weight is between{" "}
+                <span>{unit === "metric" ? metricWeightRange(bmi, height) : imperialWeightRange(bmi, height)}</span>.
             </p>
         </section>
     );
