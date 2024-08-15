@@ -32,14 +32,23 @@ function Input({ unit, setHeight, setWeight }: InputProps) {
 
     // Update height and weight when using metric units
     React.useEffect(() => {
-        setHeight(Number(cm) / 100);
-        setWeight(Number(kg));
+        // Use setTimeout to prevent the result from flickering
+        const timeoutId = setTimeout(() => {
+            setHeight(Number(cm) / 100);
+            setWeight(Number(kg));
+        }, 500);
+
+        return () => clearTimeout(timeoutId);
     }, [cm, kg, setHeight, setWeight]);
 
     // Update height and weight when using imperial units
     React.useEffect(() => {
-        setHeight(Number(ft) * 0.3048 + Number(inches) * 0.0254);
-        setWeight((Number(st) * 14 + Number(lbs)) * 0.453592);
+        const timeoutId = setTimeout(() => {
+            setHeight(Number(ft) * 0.3048 + Number(inches) * 0.0254);
+            setWeight((Number(st) * 14 + Number(lbs)) * 0.453592);
+        }, 500);
+
+        return () => clearTimeout(timeoutId);
     }, [ft, inches, st, lbs, setHeight, setWeight]);
 
     function handleChange(type: "cm" | "ft" | "inches" | "kg" | "st" | "lbs") {
