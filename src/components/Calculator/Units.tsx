@@ -32,10 +32,13 @@ function Units({ unit, setUnit }: UnitsProps) {
                     name="unit"
                     value="imperial"
                     id="imperial"
+                    className={styles.inputImperial}
                     checked={unit === "imperial"}
                     onChange={() => setUnit("imperial")}
                 />{" "}
-                <label htmlFor="imperial">Imperial</label>
+                <label htmlFor="imperial" className={styles.labelImperial}>
+                    Imperial
+                </label>
             </fieldset>
         </>
     );

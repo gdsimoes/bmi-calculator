@@ -1,5 +1,5 @@
 .wrapper {
-    margin-top: calc(-241px);
+    margin-top: -241px;
     margin-inline: 24px;
 
     padding: 24px;
@@ -29,6 +29,10 @@
     & .row {
         display: flex;
         gap: 16px;
+
+        & label {
+            flex-grow: 1;
+        }
     }
 
     & input[type="number"] {
@@ -42,6 +46,10 @@
         padding: 19px 24px;
         border-radius: 12px;
         border: 1px solid var(--dark-electric-blue);
+    }
+
+    & input[type="number"]:hover {
+        border-color: var(--blue);
     }
 
     & input::-webkit-outer-spin-button,
@@ -147,4 +155,74 @@
 
 .content span {
     font-weight: 700;
+}
+
+@media (550px <= width) {
+    .wrapper {
+        margin-inline: var(--left-padding) var(--right-padding);
+        padding: 32px;
+        gap: 32px;
+        margin-top: -382px;
+    }
+
+    .metricRow {
+        display: flex;
+        gap: 24px;
+
+        .weight {
+            padding-top: 0;
+        }
+    }
+
+    .unit {
+        justify-content: flex-start;
+        margin-bottom: 32px;
+
+        & .marginRight {
+            margin-right: 0;
+        }
+
+        & .inputImperial {
+            position: absolute;
+            left: calc(50% + 12px);
+        }
+
+        & .labelImperial {
+            position: absolute;
+            left: calc(50% + 12px + 31px + 18px);
+        }
+    }
+
+    .result {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+
+        border-radius: 16px 999px 999px 16px;
+
+        & .bmi,
+        & .welcome {
+            margin-bottom: 0;
+        }
+
+        & > * {
+            flex: 1;
+        }
+    }
+}
+
+@media (1200px <= width) {
+    .wrapper {
+        margin: 0;
+        width: 564px;
+
+        position: absolute;
+        top: 166px;
+        left: 712px;
+
+        & .bmi {
+            font-size: 4rem;
+            letter-spacing: -3.2px;
+        }
+    }
 }

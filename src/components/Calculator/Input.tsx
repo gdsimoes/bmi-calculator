@@ -80,7 +80,7 @@ function Input({ unit, setHeight, setWeight }: InputProps) {
     }
 
     return (
-        <div>
+        <div className={unit === "metric" ? styles.metricRow : undefined}>
             <fieldset>
                 <legend>Height</legend>
                 <div className={styles.row}>

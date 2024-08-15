@@ -59,8 +59,10 @@ function Result({ unit, height, weight }: ResultProps) {
 
     return (
         <section className={styles.result}>
-            <p className={styles.intro}>Your BMI is...</p>
-            <p className={styles.bmi}>{bmi.toFixed(1)}</p>
+            <div>
+                <p className={styles.intro}>Your BMI is...</p>
+                <p className={styles.bmi}>{bmi.toFixed(1)}</p>
+            </div>
             <p className={styles.content}>
                 Your BMI suggests you&apos;re {bmiText(bmi)}. Your ideal weight is between{" "}
                 <span>{unit === "metric" ? metricWeightRange(bmi, height) : imperialWeightRange(bmi, height)}</span>.
