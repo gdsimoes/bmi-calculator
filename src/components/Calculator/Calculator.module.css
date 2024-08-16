@@ -218,11 +218,17 @@
 
         position: absolute;
         top: 166px;
-        left: 712px;
+        left: 600px;
 
         & .bmi {
             font-size: 4rem;
             letter-spacing: -3.2px;
         }
+    }
+}
+
+@media (1280px <= width) {
+    .wrapper {
+        left: 712px;
     }
 }
