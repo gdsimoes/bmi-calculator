@@ -1,0 +1,48 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    padding: 32px 24px 217px;
+    border-radius: 0px 0px 35px 35px;
+    background: linear-gradient(290deg, #d6e6fe 0%, rgba(214, 252, 254, 0) 100%);
+
+    text-align: center;
+
+    & > img {
+        width: 40px;
+        height: auto;
+    }
+}
+
+/* Tablet */
+@media (550px <= width) {
+    .wrapper {
+        padding: 32px var(--left-padding) 326px var(--right-padding);
+
+        & > img {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+/* Desktop */
+@media (1200px <= width) {
+    .wrapper {
+        width: 978px;
+        padding: 75px 397px 200px 116px;
+
+        align-self: start;
+        align-items: start;
+        gap: 35px;
+
+        text-align: start;
+
+        & > img {
+            width: 64px;
+            height: auto;
+            margin-bottom: 92px;
+        }
+    }
+}
