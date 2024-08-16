@@ -3,7 +3,7 @@
     --top-padding: 56px;
     --bottom-padding: 56px;
 
-    background: linear-gradient(290deg, rgba(214, 230, 254, 0.17) 0%, rgba(214, 252, 254, 0) 100%);
+    background: linear-gradient(290deg, rgba(214, 230, 254, 0.2) 0%, rgba(214, 252, 254, 0) 100%);
 
     padding: var(--top-padding) var(--right-padding) var(--bottom-padding) var(--left-padding);
 
