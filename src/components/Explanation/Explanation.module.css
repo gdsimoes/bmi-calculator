@@ -1,0 +1,15 @@
+.wrapper {
+    & img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 48px;
+    }
+}
+
+.content {
+    margin-inline: 24px;
+
+    & h2 {
+        margin-bottom: 32px;
+    }
+}
