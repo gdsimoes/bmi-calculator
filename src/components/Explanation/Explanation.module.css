@@ -1,5 +1,5 @@
 .wrapper {
-    & img {
+    & .manEating {
         width: 100%;
         height: auto;
         margin-bottom: 48px;
@@ -14,6 +14,10 @@
     }
 }
 
+.curve {
+    display: none;
+}
+
 @media (550px <= width) {
     .wrapper {
         display: flex;
@@ -23,7 +27,7 @@
         position: relative;
         left: -42px;
 
-        & img {
+        & .manEating {
             width: 361px;
             height: 411px;
             object-fit: cover;
@@ -33,5 +37,32 @@
 
     .content {
         margin-inline: 0;
+    }
+}
+
+@media (1200px <= width) {
+    .wrapper {
+        width: 1160px;
+        left: 0;
+        align-items: flex-end;
+        gap: 131px;
+        margin-top: -55px;
+
+        & .manEating {
+            width: 564px;
+            height: auto;
+        }
+    }
+
+    .content {
+        margin-bottom: 40px;
+    }
+
+    .curve {
+        display: unset;
+        position: absolute;
+
+        right: 0;
+        top: -52px;
     }
 }

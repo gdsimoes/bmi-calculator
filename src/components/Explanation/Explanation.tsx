@@ -3,11 +3,12 @@ import Image from "next/image";
 import styles from "./Explanation.module.css";
 
 import manEating from "/public/images/image-man-eating.webp";
+import curve from "/public/images/pattern-curved-line-left.svg";
 
 function Explanation() {
     return (
         <section className={styles.wrapper}>
-            <Image src={manEating} alt="" width={564} height={533} />
+            <Image src={manEating} alt="" width={564} height={533} className={styles.manEating} />
             <div className={styles.content}>
                 <h2>What your BMI result means</h2>
                 <p>
@@ -18,6 +19,7 @@ function Explanation() {
                     five days a week.
                 </p>
             </div>
+            <Image src={curve} alt="" className={styles.curve} />
         </section>
     );
 }
