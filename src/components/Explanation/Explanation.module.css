@@ -13,3 +13,25 @@
         margin-bottom: 32px;
     }
 }
+
+@media (550px <= width) {
+    .wrapper {
+        display: flex;
+        align-items: center;
+        gap: 75px;
+
+        position: relative;
+        left: -42px;
+
+        & img {
+            width: 361px;
+            height: 411px;
+            object-fit: cover;
+            margin-bottom: 0;
+        }
+    }
+
+    .content {
+        margin-inline: 0;
+    }
+}
