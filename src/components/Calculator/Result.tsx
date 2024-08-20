@@ -4,18 +4,18 @@ import styles from "./Calculator.module.css";
 
 import { unitType } from "./types";
 
-function metricBmi(height: number, weight: number) {
+export function metricBmi(height: number, weight: number) {
     return weight / height ** 2;
 }
 
-function metricWeightRange(bmi: number, height: number) {
+export function metricWeightRange(bmi: number, height: number) {
     const minWeight = 18.5 * height ** 2;
     const maxWeight = 24.9 * height ** 2;
 
     return `${minWeight.toFixed(1)}kg - ${maxWeight.toFixed(1)}kg`;
 }
 
-function imperialWeightRange(bmi: number, height: number) {
+export function imperialWeightRange(bmi: number, height: number) {
     const minWeight = 18.5 * height ** 2;
     const maxWeight = 24.9 * height ** 2;
 
