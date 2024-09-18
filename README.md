@@ -32,7 +32,7 @@ Users should be able to:
 
 ### Links
 
--   [Solution URL]()
+-   [Solution URL](https://www.frontendmentor.io/solutions/body-mass-index-calculator-built-with-react-nextjs-and-vitest-wC1N8Jkvf4)
 
 -   [Live Site](https://gdsimoes-bmi-calculator.vercel.app/)
 
